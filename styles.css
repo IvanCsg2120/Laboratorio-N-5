@@ -1,0 +1,146 @@
+/* Creado por [Ivan Coronado] - [9/30/2025]
+   CSS profesional y moderno para la página de viajes
+   Todas las secciones están documentadas */
+
+/* ===============================
+   PARTE 1: Estilo general del body
+================================= */
+body {
+    background-color: #f0f2f5; /* Color neutro moderno de fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+    margin: 0; /* Elimina margen predeterminado del navegador */
+    padding-top: 70px; /* Espacio superior para que el menú fijo no tape el contenido */
+    color: #333; /* Color de texto principal */
+}
+
+/* ===============================
+   PARTE 1: Título principal
+================================= */
+#encabezado-principal {
+    text-align: center;      /* Centra el texto horizontalmente */
+    color: #2c3e50;          /* Azul oscuro elegante */
+    font-size: 42px;         /* Tamaño grande para encabezado */
+    margin-bottom: 30px;     /* Espacio debajo del título */
+    font-weight: 700;        /* Negrita fuerte para destacar */
+}
+
+/* ===============================
+   PARTE 4: Menú de navegación fijo
+================================= */
+.menu-navegacion {
+    position: fixed;           /* Permanece visible al hacer scroll */
+    top: 0;                    /* Pegado a la parte superior */
+    width: 100%;               /* Ocupa todo el ancho de la pantalla */
+    background-color: #34495e; /* Fondo moderno y sobrio */
+    display: flex;             /* Usa flexbox para organizar los enlaces */
+    justify-content: center;   /* Centra los enlaces horizontalmente */
+    gap: 25px;                 /* Espacio entre enlaces */
+    padding: 15px 0;           /* Espaciado vertical del menú */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra sutil para dar profundidad */
+    z-index: 1000;             /* Asegura que el menú esté por encima del contenido */
+}
+
+/* ===============================
+   PARTE 3: Estilos de enlaces del menú
+================================= */
+.menu-navegacion a {
+    text-decoration: none;       /* Quita subrayado predeterminado */
+    color: #ecf0f1;              /* Color claro sobre fondo oscuro */
+    font-weight: 500;            /* Peso intermedio para elegancia */
+    transition: color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+.menu-navegacion a:hover {
+    color: #e67e22; /* Color de acento profesional al pasar el cursor */
+}
+
+/* ===============================
+   PARTE 2: Tarjeta de destino
+================================= */
+.tarjeta-destino {
+    border: 1px solid #dcdcdc;      /* Borde suave para definición de tarjeta */
+    padding: 20px;                   /* Espacio interno para que el contenido respire */
+    margin: 25px auto;               /* Margen superior/inferior y centrado horizontal */
+    width: 80%;                      /* Tamaño proporcional a la pantalla */
+    position: relative;              /* Contenedor relativo para etiquetas absolutas */
+    background-color: #ffffff;       /* Fondo blanco para contraste */
+    border-radius: 12px;             /* Bordes redondeados modernos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra profesional */
+    overflow: hidden;                /* Evita que contenido flotante sobresalga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al hover */
+}
+
+/* Efecto hover en tarjeta: levanta la tarjeta y aumenta sombra */
+.tarjeta-destino:hover {
+    transform: translateY(-5px); /* Pequeño movimiento hacia arriba */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra más marcada */
+}
+
+/* ===============================
+   PARTE 4: Imagen flotante en la tarjeta
+================================= */
+.tarjeta-destino img {
+    float: left;            /* Imagen a la izquierda del texto */
+    margin-right: 20px;     /* Espacio entre imagen y texto */
+    border-radius: 8px;     /* Bordes ligeramente redondeados */
+    max-width: 200px;       /* Limita tamaño máximo de la imagen */
+    height: auto;           /* Mantiene proporción */
+}
+
+/* ===============================
+   PARTE 3: Texto destacado dentro de párrafo
+================================= */
+.destacado {
+    font-weight: 700;             /* Negrita */
+    background-color: #f1c40f;    /* Amarillo profesional */
+    padding: 2px 6px;             /* Espaciado interno pequeño */
+    border-radius: 4px;           /* Bordes ligeramente redondeados */
+}
+
+/* ===============================
+   PARTE 4: Etiqueta "Nuevo" en la tarjeta
+================================= */
+.etiqueta-nuevo {
+    position: absolute;            /* Posicionamiento relativo al contenedor */
+    top: 15px;                     /* Distancia desde la parte superior */
+    right: 15px;                   /* Distancia desde la derecha */
+    background-color: #e74c3c;    /* Rojo llamativo */
+    color: white;                  /* Texto blanco para contraste */
+    padding: 6px 12px;             /* Espaciado interno de la etiqueta */
+    font-size: 12px;               /* Tamaño pequeño */
+    font-weight: 600;              /* Semi-negrita */
+    border-radius: 20px;           /* Forma de píldora */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* ===============================
+   PARTE 5: Imágenes responsivas
+================================= */
+img {
+    max-width: 100%; /* No excede el ancho del contenedor */
+    height: auto;    /* Mantiene proporción */
+}
+
+/* ===============================
+   PARTE 5: Media Query para móviles
+================================= */
+@media (max-width: 600px) {
+    /* Ajusta tamaño del h1 en pantallas pequeñas */
+    #encabezado-principal {
+        font-size: 28px;
+    }
+
+    /* La tarjeta ocupa casi todo el ancho */
+    .tarjeta-destino {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Imagen centrada y bloque para móviles */
+    .tarjeta-destino img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto; /* Margen inferior para separar del texto */
+        max-width: 100%;
+    }
+}
